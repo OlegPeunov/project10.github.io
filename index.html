@@ -20,24 +20,25 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" pattern="" placeholder="Имя" required />
+                        <input class="form__input" type="text" name="name" minlength="2" maxlength="30" pattern="[А-ЯЁ][а-яё]+-*[А-ЯЁ]*[а-я]*" placeholder="Имя" required />
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="email" pattern="" placeholder="E-Mail" required />
+                        <input class="form__input" type="text" name="email" pattern="\w+.?\w*@\w+.?\w*\.\w+" placeholder="E-Mail" required />
                         <span class="form__error">e-mail в формате: students-yandex@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="tel" placeholder="Телефон" pattern="" minlength="" maxlength="18"  required/>
+                        <input class="form__input" type="text" name="tel" placeholder="Телефон" pattern="(\+7|8)\s?\(?\d{3}\)?\s?-?\d\d\d-?\d\d-?\d\d" minlength="" maxlength="18"  required/>
                         <span class="form__error">Недопустимый формат номера</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="url" pattern="" placeholder="Ваш сайт" required/>
+                        <input class="form__input" type="text" name="url" pattern="http(s)?://\w+.\w+.?(\w+)?.?(\w+)?.?(\w+)?.?(\w+)?.?(\w+)?.?(\w+)?#?" placeholder="Ваш сайт" required/>
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="text">Отправить</button>
                 </fieldset>
             </form>
         </div>
+        <script src="scripr.js"></script>
     </main>     
 </body>
 </html>
